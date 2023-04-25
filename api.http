@@ -1,0 +1,56 @@
+@baseURL=http://localhost:3000
+
+@host=http://localhost:3000
+
+################
+### Products ###
+################
+
+### Add product 
+POST {{baseURL}}/products
+Content-Type: application/json
+
+{
+    "name": "Tiny Tina's Wonderlands",
+    "price": "79.99"
+}
+
+### GET all product 
+GET {{baseURL}}/products
+
+### GET product by id
+GET {{baseURL}}/products/6447b50ea104e69f4a547a7d
+
+### Update product 
+PUT {{baseURL}}/products/64482fef348ac143bc9273bb
+Content-Type: application/json
+
+{
+    "name": "Tiny Tina's Wonderlands",
+    "price": "59.99"
+}
+
+### Delete product 
+DELETE {{baseURL}}/products/64482fef348ac143bc9273bb
+
+##############
+### Orders ###
+##############
+
+### Add order
+POST {{baseURL}}/orders
+Content-Type: application/json
+
+{
+    "productId": "6447b50ea104e69f4a547a7d",
+    "quantity": "2"
+}
+
+### GET all orders
+GET {{baseURL}}/orders
+
+### GET order by id
+GET {{baseURL}}/orders/64482fab348ac143bc9273b6
+
+### Delete order
+DELETE {{baseURL}}/orders/64482fab348ac143bc9273b6

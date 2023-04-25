@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 mongoose.connect('mongodb+srv://node-shop-admin:' + process.env.MONGO_ATLAS_PASSWORD + '@rest-shop.8lhveo6.mongodb.net/?retryWrites=true&w=majority');
+mongoose.Promise = global.Promise;
 
 const productsRoutes = require('./shop_api/routes/products');
 const ordersRoutes = require('./shop_api/routes/orders');

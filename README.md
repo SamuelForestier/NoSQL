@@ -23,7 +23,7 @@ Dans le contexte d'une API RESTful, il est courant que chaque requête renvoie u
 Ces réponses peuvent inclure des informations sur la ressource nouvellement créée ou sur la ressource qui vient d'être supprimée, afin que le client puisse facilement effectuer des opérations ultérieures sur ces ressources. Cela peut également inclure une recommandation pour effectuer une requête ultérieure pour obtenir des informations plus détaillées sur la ressource.  
 
 Par exemple, lorsqu'un client effectue une requête POST pour créer une nouvelle ressource (par exemple, un nouveau produit), l'API peut inclure dans la réponse une recommandation pour effectuer une requête GET pour récupérer les détails de ce nouveau produit. Cette recommandation peut être présentée sous la forme d'un objet JSON, comme dans l'exemple que vous avez fourni :
-```http
+```js
 request: {
     type: 'GET',
     url: 'http://localhost:3000/products/' + document._id

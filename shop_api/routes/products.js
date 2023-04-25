@@ -12,9 +12,6 @@ router.post('/', ProductsController.create_product);
 // Handle incoming GET requests to /products/:productId
 router.get('/:productId', ProductsController.get_product);
 
-// Handle incoming PATCH requests to /products/:productId
-router.patch('/:productId', ProductsController.update_product);
-
 // Handle incoming PUT requests to /products/:productId
 router.put('/:productId', ProductsController.update_product);
 
